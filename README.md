@@ -74,5 +74,5 @@ flutter build apk --release
 生成的 APK 文件位于 build/app/outputs/flutter-apk/ 目录下。
 
 ##  🙏致谢
-*  本项目开发的核心灵感来源于 Bilibili 知名 up 主 barry巴里里 的视频创意，感谢他的精彩分享为这个项目播下了种子。原视频链接：【BV1cjcvzpEBG】
-*  感谢所有为本项目提供精美扑克牌图片素材的设计师与创作者。
+*  本项目开发的核心灵感来源于 Bilibili 知名 up 主 barry巴里里 的视频创意，感谢他的精彩分享为这个项目播下了种子。原视频链接：[【BV1cjcvzpEBG】](https://www.bilibili.com/video/BV1cjcvzpEBG/?spm_id_from=333.337.search-card.all.click&vd_source=1bab92fedfcb0672d64e130d874049a1)
+*  感谢所有为本项目提供精美扑克牌图片素材的设计师与创作者：(https://gitcode.com/open-source-toolkit/77d38/?utm_source=tools_gitcode&index=t2&type=card&&uuid_tt_dd=10_37420612140-1771643104349-512531&isLogin=9&from_id=142945339&from_link=099084800d68214f373ecaa1fb109cb7)
