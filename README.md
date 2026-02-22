@@ -1,17 +1,70 @@
-# poker_magic_app
+# Wombat Poker 魔术扑克 App
 
-A new Flutter project.
+这是一个通过触摸与滑动来“变出”扑克牌的魔术工具 App。灵感来源于 Bilibili 上一位 up 主的创意视频。
 
-## Getting Started
+## ✨ 功能与效果
 
-This project is a starting point for a Flutter application.
+*   **核心玩法**：在待机全黑屏幕下，通过单指在特定区域点按（确定牌面数字）并滑动（确定花色），屏幕便会显示对应的扑克牌图片。再次点击屏幕即可返回待机状态。
+*   **交互设计**：屏幕被分为 3x5 的虚拟网格，分别对应 A, 2-10, J, Q, K, 小王, 大王。
+*   **视觉呈现**：扑克牌以高清图片展示，视觉效果直观，适合用于魔术表演或趣味互动。
 
-A few resources to get you started if this is your first Flutter project:
+*(您可以在这里插入一个手机录制的 GIF 或视频链接，直观展示操作过程)*
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 📱 直接体验
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+如果您只想使用这个工具，无需配置任何开发环境，可以直接下载编译好的 APK 文件：
+
+👉 **[点击此处下载最新版 APK](链接到您的APK文件)**
+
+*如果您是开发者或希望进行二次开发，请继续阅读以下内容。*
+
+## 🛠️ 开发指南
+
+### 环境依赖
+在开始之前，请确保您的开发环境已安装以下工具：
+*   [Flutter SDK](https://docs.flutter.dev/get-started/install) (版本 >= 3.11.0)
+*   [Android Studio](https://developer.android.com/studio) 或 [VS Code](https://code.visualstudio.com/) (用于编译和运行)
+*   Git (用于版本管理)
+
+### 项目配置
+1.  克隆本仓库：
+    ```bash
+    git clone https://github.com/HuaweiREN/Wombat_Magic_Poker.git
+    ```
+2.  进入项目目录：
+    ```bash
+    cd Wombat_Magic_Poker
+    ```
+3.  获取依赖：
+    ```bash
+    flutter pub get
+    ```
+
+### 核心依赖说明
+以下是项目中用到的主要依赖包及其作用，方便您理解或进行二次开发：
+*   `flutter`：基础的 Flutter SDK。
+*   `sherpa_onnx`：用于离线语音识别功能（可选，当前版本暂未启用）。
+*   `flutter_sound` & `permission_handler`：用于录音和权限处理（与语音识别相关）。
+*   `path_provider`：用于管理设备上的文件路径（如模型文件存放）。
+*   `flutter_launcher_icons`：用于自动生成不同分辨率的应用图标。
+*   *(其他依赖请参考 `pubspec.yaml`)*
+
+要更新所有依赖到兼容的最新版本，可以运行：
+```bash
+flutter pub upgrade
+```
+
+### 运行与构建
+*  在连接的真机或模拟器上运行调试版：
+```bash
+flutter run
+```
+* 生成发布版 APK：
+```bash
+flutter build apk --release
+```
+生成的 APK 文件位于 build/app/outputs/flutter-apk/ 目录下。
+
+##  🙏致谢
+*  本项目开发的核心灵感来源于 Bilibili 知名 up 主 barry巴里里 的视频创意，感谢他的精彩分享为这个项目播下了种子。原视频链接：【BV1cjcvzpEBG】
+*  感谢所有为本项目提供精美扑克牌图片素材的设计师与创作者。
