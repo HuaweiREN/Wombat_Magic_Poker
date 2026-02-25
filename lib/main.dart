@@ -44,11 +44,11 @@ class _PokerMagicHomeState extends State<PokerMagicHome> {
   void initState() {
     super.initState();
     // 可以轻松替换为其他实现，例如：
-    _selector = GridSwipeCardSelector(); // 默认选择，存储于grid_swipe_selector.dart
+    // _selector = GridSwipeCardSelector(); // 默认选择，存储于grid_swipe_selector.dart
     // _selectpr = RandomTapCardSelector(); // 随机选牌
 
     // 通过语音选牌
-    /*
+
     _selector = VoiceCommandCardSelector(
       setState: (fn) {
         if (mounted) setState(fn);
@@ -62,7 +62,6 @@ class _PokerMagicHomeState extends State<PokerMagicHome> {
         print("警告：语音模型加载时间过长");
       }
     });
-    */
   }
 
   @override
@@ -116,6 +115,19 @@ class _PokerMagicHomeState extends State<PokerMagicHome> {
                   _getCardImagePath(_currentRank!, _currentSuit),
                   height: imageHeight,
                   fit: BoxFit.contain,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Padding(
+                      padding: const EdgeInsets.all(24),
+                      child: Text(
+                        '牌面图片加载失败。\n'
+                        '请确认资源存在并已在 pubspec.yaml 的 assets 中声明：\n'
+                        '${_getCardImagePath(_currentRank!, _currentSuit)}\n\n'
+                        '错误：$error',
+                        style: const TextStyle(color: Colors.white, fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    );
+                  },
                 ),
         ),
       ),
@@ -129,9 +141,9 @@ class _PokerMagicHomeState extends State<PokerMagicHome> {
     const suits = ['heitao', 'hongtao', 'meihua', 'fangpian'];
     String suitStr = suits[suit];
     String rankStr;
-    if (rank == 1)
+    if (rank == 1) {
       rankStr = 'A';
-    else if (rank >= 2 && rank <= 10)
+    } else if (rank >= 2 && rank <= 10)
       rankStr = rank.toString();
     else if (rank == 11)
       rankStr = 'J';
