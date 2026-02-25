@@ -23,9 +23,21 @@
 ### 经典魔术模式
 #### 直板机
 
+
+https://github.com/user-attachments/assets/665279c7-cb37-4963-bde6-b1b8d9e5bb2d
+
+
 #### 折叠屏
 
+
+https://github.com/user-attachments/assets/1d0697b5-aef0-4f63-93a0-369e9ffba4de
+
+
 ### 语音指令模式
+
+
+https://github.com/user-attachments/assets/aa705a20-20b3-4e59-9295-dd2a9f6ecfc7
+
 
 
 ## 📱 直接体验
